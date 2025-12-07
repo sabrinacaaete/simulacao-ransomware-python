@@ -4,12 +4,12 @@ import os
 def carregar_chave():
     return open("chave.key", "rb").read()
 
-def descriptografar_arquivo(arquivo, chave)
+def descriptografar_arquivo(arquivo, chave):
     f = Fernet(chave)
     with open(arquivo, "rb") as file:
         dados = file.read()
         dados_descriptografados = f.decrypt(dados)
-    with open(arquvio, "wb") as file:
+    with open(arquivo, "wb") as file:
         file.write(dados_descriptografados)
 
 def encontrar_arquivos(diretorio):
@@ -27,5 +27,6 @@ def main():
     for arquivo in arquivos:
         descriptografar_arquivo(arquivo, chave)
     print("Arquivos restaurados com sucesso")
+
 
     
